@@ -71,6 +71,15 @@ snippet fprintf "fprintf ..."
 fprintf(${1:stderr}, "${2:%s}\n"${2/([^%]|%%)*(%.)?.*/(?2:, :\);)/}$3${2/([^%]|%%)*(%.)?.*/(?2:\);)/}
 endsnippet
 
+snippet ifelse "if..else (ifelse)"
+if (${1:/* condition */}) {
+	${VISUAL}$0
+}else{
+	${VISUAL}$1
+}
+endsnippet
+
+
 snippet eli "else if .. (eli)"
 else if (${1:/* condition */}) {
 	${VISUAL}$0

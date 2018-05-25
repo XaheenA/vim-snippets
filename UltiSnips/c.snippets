@@ -93,11 +93,11 @@ else if (${1:/* condition */}) {
 }
 endsnippet
 
-snippet print "printf .. (printf)"
+snippet printf "printf .. (printf)"
 printf("${1:text} ${2:%d}\n", ${3:variables}}
 endsnippet
 
-snippet printf "printf .. (printf)"
+snippet printf_OLD "printf .. (printf)"
 printf("${1:%s}\n"${1/([^%]|%%)*(%.)?.*/(?2:, :\);)/}$2${1/([^%]|%%)*(%.)?.*/(?2:\);)/}
 endsnippet
 

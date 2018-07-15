@@ -98,7 +98,7 @@ snippet time "hh:mm" w
 endsnippet
 
 snippet todo "TODO comment" bw
-`!p snip.rv=get_comment_format()[0]` TODO: <`!v strftime('%d-%m-%y')`,}${3: `echo $USER`>} `!p snip.rv=get_comment_format()[2]`
+`!p snip.rv=get_comment_format()[0]` TODO: <`!v strftime('%d-%m-%y')`,${3: `echo $USER`>} `!p snip.rv=get_comment_format()[2]`
 endsnippet
 
 snippet original_todo "TODO comment" bw

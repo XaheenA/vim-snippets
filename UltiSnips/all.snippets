@@ -97,16 +97,11 @@ snippet time "hh:mm" w
 `!v strftime("%H:%M")`
 endsnippet
 
-snippet tot "TODO TEST" bw
-`!p snip.rv=get_comment_format()[0]` TODO: <${`!v strftime('%d-%m-%y')`}${3:, `echo $USER`}> `!p snip.rv=get_comment_format()[2]`
-`!p snip.rv=get_comment_format()[3]` 
-endsnippet
-
 snippet todo "TODO comment" bw
-`!p snip.rv=get_comment_format()[0]` TODO: <${3:`!v strftime('%d-%m-%y')`}${4:, `echo $USER`}> `!p snip.rv=get_comment_format()[2]`
+`!p snip.rv=get_comment_format()[0]` TODO: <${3:`!v strftime('%d-%m-%y')`,}${4: `echo $USER`}> `!p snip.rv=get_comment_format()[2]`
 endsnippet
 
-snippet todo_original "TODO comment" bw
+snippet original_todo "TODO comment" bw
 `!p snip.rv=get_comment_format()[0]` ${2:TODO}: $0${3: <${4:`!v strftime('%d-%m-%y')`}${5:, `!v g:snips_author`}>} `!p snip.rv=get_comment_format()[2]`
 endsnippet
 

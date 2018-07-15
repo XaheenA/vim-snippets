@@ -76,33 +76,33 @@ endsnippet
 #########
 # DATES #
 #########
-snippet date "YYYY-MM-DD" w
-`!v strftime("%F")`
-endsnippet
 
-snippet ddate "Month DD, YYYY" w
+snippet date "Month DD, YYYY" w
 `!v strftime("%b %d, %Y")`
 endsnippet
 
-snippet diso "ISO format datetime" w
-`!v strftime("%F %H:%M:%S%z")`
+snippet dateReverse "YYYY-MM-DD" w
+`!v strftime("%F")`
 endsnippet
 
-snippet time "hh:mm" w
-`!v strftime("%H:%M")`
+snippet dateISO "ISO format datetime" w
+`!v strftime("%F %H:%M:%S%z")`
 endsnippet
 
 snippet datetime "YYYY-MM-DD hh:mm" w
 `!v strftime("%Y-%m-%d %H:%M")`
 endsnippet
 
-snippet todo "Commontodo Reminder" b
-`!p snip.rv=get_comment_format()` echo $USER` [Date: `echo "$(date '+%d/%m/%Y - %H:%M:%S')"`]
-`!p snip.rv=get_comment_format()` TODO : ${1:desc}
-${VISUAL}$2
+snippet time "hh:mm" w
+`!v strftime("%H:%M")`
 endsnippet
 
-snippet todoone "TODO comment" bw
+
+snippet todo "TODO comment" bw
+`!p snip.rv=get_comment_format()[0]` ${!TODO}: ${<${2:`!v strftime('%d-%m-%y')`}${5:, `echo $USER`}>} `!p snip.rv=get_comment_format()[2]`
+endsnippet
+
+snippet todo_original "TODO comment" bw
 `!p snip.rv=get_comment_format()[0]` ${2:TODO}: $0${3: <${4:`!v strftime('%d-%m-%y')`}${5:, `!v g:snips_author`}>} `!p snip.rv=get_comment_format()[2]`
 endsnippet
 

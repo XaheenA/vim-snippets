@@ -99,8 +99,7 @@ endsnippet
 
 
 snippet todo "TODO comment" bw
-`!p snip.rv=get_comment_format()[0]` TODO: {<${2:`!v strftime('%d-%m-%y')`}${3:, `echo $USER`}>} `!p snip.rv=get_comment_format()[2]`
-`!p snip.rv=get_comment_format()[4]` ${6:, description}
+`!p snip.rv=get_comment_format()[0]` TODO: {<${2:`!v strftime('%d-%m-%y')`}${3:, `echo $USER`}>} `!p snip.rv=get_comment_format()[4]`
 endsnippet
 
 snippet todo_original "TODO comment" bw

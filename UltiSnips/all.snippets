@@ -97,9 +97,9 @@ snippet datetime "YYYY-MM-DD hh:mm" w
 endsnippet
 
 snippet todo "Commontodo Reminder" b
-`!p snip.rv=get_comment_format()[0]`echo $USER` [Date: `echo "$(date '+%d/%m/%Y - %H:%M:%S')"`]
-`!p snip.rv=get_comment_format()[0]`TODO : ${1:desc}
-${VISUAL}$0
+`!p snip.rv=get_comment_format()` echo $USER` [Date: `echo "$(date '+%d/%m/%Y - %H:%M:%S')"`]
+`!p snip.rv=get_comment_format()` TODO : ${1:desc}
+${VISUAL}$2
 endsnippet
 
 snippet todoone "TODO comment" bw

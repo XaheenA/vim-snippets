@@ -99,7 +99,7 @@ snip.rv = snip.basename or "untitled"`} ${2:extends ${3:Parent} }${4:implements 
 }
 endsnippet
 
-snippet clc "class with constructor, fields, setter and getters" b
+snippet classall "class with constructor, fields, setter and getters" b
 public class `!p
 snip.rv = snip.basename or "untitled"` {
 `!p
@@ -129,7 +129,7 @@ for i in args:
 }
 endsnippet
 
-snippet clc "class with constructor, with field names" b
+snippet classCF "class with constructor, with field names" b
 public class `!p
 snip.rv = snip.basename or "untitled"` {
 `!p
@@ -366,11 +366,8 @@ snippet pa "package" b
 package $0
 endsnippet
 
-snippet p "print" b
-System.out.print($1);$0
-endsnippet
 
-snippet pl "println"  b
+snippet prinl "println"  b
 System.out.println($1);$0
 endsnippet
 
@@ -448,7 +445,7 @@ snippet todo "This is a todo Reminder" b
 ${VISUAL}$0
 endsnippet
 
-snippet sc "Scanner object" b
+snippet sca "Scanner object" b
 Scanner in = new Scanner(System.in);
 ${VISUAL}$0
 endsnippet
@@ -458,6 +455,9 @@ snippet syso "println"  b
 System.out.println("$1"$0);
 endsnippet
 
+snippet SysOut "println"  b
+System.out.println("$1"$0);
+endsnippet
 
 
 

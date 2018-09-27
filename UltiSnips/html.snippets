@@ -59,7 +59,7 @@ endsnippet
 #############
 # HTML TAGS #
 #############
-snippet a "Link" w
+snippet link_ext "Link" w
 <a href="${1:http://www.${2:url.com}}"${3: target="_blank"}>${4:Anchor Text}</a>
 endsnippet
 
@@ -87,7 +87,7 @@ snippet aside "<aside>"
 </aside>
 endsnippet
 
-snippet b "<b>" w
+snippet bold "<b>" w
 <b>$1</b>
 endsnippet
 
@@ -105,8 +105,8 @@ snippet body "<body>"
 </body>
 endsnippet
 
-snippet br "<br>" w
-<br>$1</br>
+snippet blank "<br>" w
+<br>
 endsnippet
 
 snippet button "<button>"
@@ -139,11 +139,11 @@ snippet datalist "<datalist>"
 </datalist>
 endsnippet
 
-snippet dd "<dd>"
+snippet description "<dd>"
 <dd>$1</dd>
 endsnippet
 
-snippet del "<del>" w
+snippet deleted "<del>" w
 <del cite="$2" datetime="${3:`date '+%Y-%m-%dT%H:%M:%S%:z'`}">$1</del>
 endsnippet
 
@@ -169,17 +169,17 @@ snippet div. "<div> with class" w
 </div>
 endsnippet
 
-snippet dl "<dl>"
+snippet description_list "<dl>"
 <dl>
 	${1:Definition list}
 </dl>
 endsnippet
 
-snippet dt "<dt>"
+snippet description_term "<dt>"
 <dt>$1</dt>
 endsnippet
 
-snippet em "<em>" w
+snippet em_tag "<em>" w
 <em>$1</em>
 endsnippet
 
@@ -215,27 +215,27 @@ snip.rv = (snip.basename or 'unnamed') + '_submit'
 </form>
 endsnippet
 
-snippet h1 "HTML <h1>" w
+snippet header1 "HTML <h1>" w
 <h1>${0:${VISUAL}}</h1>
 endsnippet
 
-snippet h2 "HTML <h2>" w
+snippet header2 "HTML <h2>" w
 <h2>${0:${VISUAL}}</h2>
 endsnippet
 
-snippet h3 "HTML <h3>" w
+snippet header3 "HTML <h3>" w
 <h3>${0:${VISUAL}}</h3>
 endsnippet
 
-snippet h4 "HTML <h4>" w
+snippet header4 "HTML <h4>" w
 <h4>${0:${VISUAL}}</h4>
 endsnippet
 
-snippet h5 "HTML <h5>" w
+snippet header5 "HTML <h5>" w
 <h5>${0:${VISUAL}}</h5>
 endsnippet
 
-snippet h6 "HTML <h6>" w
+snippet header6 "HTML <h6>" w
 <h6>${0:${VISUAL}}</h6>
 endsnippet
 
@@ -253,7 +253,7 @@ snippet header "<header>"
 </header>
 endsnippet
 
-snippet hr "<hr>"
+snippet hr_tag "<hr>"
 <hr>
 endsnippet
 
@@ -285,11 +285,11 @@ snippet htmll "HTML basic structure with the lang attribute" b
 </html>
 endsnippet
 
-snippet i "<i>" w
+snippet i_tag "<i>" w
 <i>$1</i>
 endsnippet
 
-snippet id "id global attribute"
+snippet id_set "id global attribute"
 id="$1"
 endsnippet
 
@@ -321,7 +321,7 @@ snippet legend "<legend>"
 <legend>$1</legend>
 endsnippet
 
-snippet li "list item" w
+snippet list_item "list item" w
 <li>${0:${VISUAL}}</li>
 endsnippet
 
@@ -351,7 +351,7 @@ snippet meter "<meter>"
 <meter>$1</meter>
 endsnippet
 
-snippet nav "<nav>"
+snippet navigation "<nav>"
 <nav>
 	${1:navigation links}
 </nav>
@@ -401,11 +401,11 @@ snippet progress "<progress>"
 <progress>$1</progress>
 endsnippet
 
-snippet q "<q>" w
+snippet quotation "<q>" w
 <q>$1</q>
 endsnippet
 
-snippet s "<s>" w
+snippet s_tag "<s>" w
 <s>$1</s>
 endsnippet
 
@@ -491,7 +491,7 @@ snippet tfoot "<tfoot>"
 <tfoot>$1</tfoot>
 endsnippet
 
-snippet th "table header" w
+snippet table_header "table header" w
 <th>${0:${VISUAL}}</th>
 endsnippet
 

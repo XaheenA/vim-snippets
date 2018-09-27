@@ -381,8 +381,10 @@ snippet option "Option" w
 <option${1: value="${2:option}"}>${3:$2}</option>
 endsnippet
 
-snippet p "paragraph" w
-<p>${0:${VISUAL}}</p>
+snippet parag "paragraph" w
+<p>
+	${0:${VISUAL}}
+</p>
 endsnippet
 
 snippet picture "<picture>"
@@ -509,7 +511,7 @@ snippet tr "table row" w
 <tr>${0:${VISUAL}}</tr>
 endsnippet
 
-snippet ul "unordered list" w
+snippet list_un "unordered list" w
 <ul>
 	${0:${VISUAL}}
 </ul>
@@ -529,9 +531,11 @@ endsnippet
 
 ### custom
 snippet comment "comment tags" w
-<!-- ${1:${comment}}-->
+<!-- ${1:COMMENT}-->
 endsnippet
 
-
+snippet tag "<your_tag>" w
+<$1>$2</$1>
+endsnippet
 
 # vim:ft=snippets:

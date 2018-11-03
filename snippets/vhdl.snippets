@@ -1,12 +1,12 @@
 #
 ## Libraries
 
-snippet lib
+snippet libra
 	library ${1}
 	use ${1}.${2}
 
 # Standard Libraries
-snippet libs
+snippet libr
 	library IEEE;
 	use IEEE.std_logic_1164.ALL;
 	use IEEE.numeric_std.ALL;
@@ -17,7 +17,7 @@ snippet libx
 	use UNISIM.VCOMPONENTS.ALL;
 
 ## Entity Declaration
-snippet ent
+snippet entity
 	entity ${1:`vim_snippets#Filename()`} is
 		generic (
 			${2}
@@ -28,22 +28,19 @@ snippet ent
 	end entity $1;
 
 ## Architecture
-snippet arc
+snippet archi
 	architecture ${1:behav} of ${2:`vim_snippets#Filename()`} is
-
-		${3}
-
 	begin
-
+		${3}
 
 	end $1;
 
 ## Declarations
 # std_logic
-snippet st
+snippet stdl
 	signal ${1} : std_logic;
 # std_logic_vector
-snippet sv
+snippet stdv
 	signal ${1} : std_logic_vector (${2} downto 0);
 # std_logic in
 snippet ist
@@ -62,13 +59,13 @@ snippet un
 	signal ${1} : unsigned (${2} downto 0);
 ## Process Statements
 # process
-snippet pr
+snippet process
 	process (${1})
 	begin
 		${2}
 	end process;
 # process with clock
-snippet prc
+snippet process_clock
 	process (${1:clk})
 	begin
 		if rising_edge ($1) then
@@ -76,39 +73,39 @@ snippet prc
 		end if;
 	end process;
 # process all
-snippet pra
+snippet process_all
 	process (${1:all})
 	begin
 		${2}
 	end process;
 ## Control Statements
 # if
-snippet if
+snippet if_s
 	if ${1} then
 		${2}
 	end if;
 # if
-snippet ife
+snippet if_else
 	if ${1} then
 		${2}
 	else
 		${3}
 	end if;
 # else
-snippet el
+snippet else
 	else
 		${1}
 # if
-snippet eif
+snippet elif
 	elsif ${1} then
 		${2}
 # case
-snippet ca
+snippet case
 	case ${1} is
 		${2}
 	end case;
 # when
-snippet wh
+snippet when
 	when ${1} =>
 		${2}
 # for
@@ -117,7 +114,7 @@ snippet for
 		${5}
 	end loop;
 # while
-snippet wh
+snippet while
 	while ${1} loop
 		${2}
 	end loop;

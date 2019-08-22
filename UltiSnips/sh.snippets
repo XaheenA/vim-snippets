@@ -29,22 +29,22 @@ snippet bang "bash bang"
 `!p snip.rv = '#!/bin/' + getShell() + "\n\n" `
 endsnippet
 
-snippet b! "bash bang"
+snippet bangb "bash bang"
 `!p snip.rv = '#!/bin/' + getShell() + "\n\n" `
 endsnippet
 
-snippet env "#!/usr/bin/env (!env)"
+snippet bange "#!/usr/bin/env (!env)"
 `!p snip.rv = '#!/usr/bin/env ' + getShell() + "\n\n" `
 endsnippet
 
-snippet sbash "safe bash options"
+snippet bangs "safe bash options"
 #!/usr/bin/env bash
 set -euo pipefail
 IFS=$'\n\t'
 `!p snip.rv ='\n\n' `
 endsnippet
 
-snippet temp "Tempfile"
+snippet tempf "Tempfile"
 ${1:TMPFILE}="$(mktemp -t ${3:--suffix=${4:.SUFFIX}} ${2:`!p
 snip.rv = re.sub(r'[^a-zA-Z]', '_', snip.fn) or "untitled"
 `}.XXXXXX)"

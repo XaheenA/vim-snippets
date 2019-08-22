@@ -493,7 +493,7 @@ def ${1:fname}(`!p snip.rv = vim.eval('indent(".") ? "self" : ""')`$2):
 	$0
 endsnippet
 
-snippet def "function with docstrings" b
+snippet defd "function with docstrings" b
 def ${1:function}(`!p
 if snip.indent:
 	snip.rv = 'self' + (", " if len(t[2]) else "")`${2:arg1}):
@@ -710,5 +710,24 @@ snippet pmdoc "pocoo style module doc string" b
 """
 $0
 endsnippet
+
+
+
+
+snippet intro "This is a intro to file" b
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+#
+#  Author: ${1:name}
+#  Date: `echo "$(date '+%d/%m/%Y - %H:%M:%S')"`
+#  Description : ${2:desc}
+#
+${VISUAL}$0
+endsnippet
+
+snippet todo "This is a todo Reminder" b
+# Author: `echo $USER` [Date: `echo "$(date '+%d/%m/%Y - %H:%M:%S')"`]
+# TODO : ${1:desc}
+${VISUAL}$0
 
 # vim:ft=snippets:

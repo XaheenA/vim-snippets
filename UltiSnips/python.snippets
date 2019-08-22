@@ -5,7 +5,7 @@ priority -50
 ###########################################################################
 
 #! header
-snippet #! "Shebang header for python scripts" b
+snippet bang "Shebang header for python scripts" b
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 $0
@@ -256,7 +256,7 @@ endglobal
 # Class & Special Method Name Snippets #
 ########################################
 
-snippet class "class with docstrings" b
+snippet classd "class with docstrings" b
 class ${1:MyClass}(${2:object}):
 
 	`!p snip.rv = triple_quotes(snip)`${3:Docstring for $1. }`!p snip.rv = triple_quotes(snip)`
@@ -279,7 +279,7 @@ write_init_body(args, t[2], snip)
 endsnippet
 
 
-snippet slotclass "class with slots and docstrings" b
+snippet classds "class with slots and docstrings" b
 class ${1:MyClass}(${2:object}):
 
 	`!p snip.rv = triple_quotes(snip)`${3:Docstring for $1. }`!p snip.rv = triple_quotes(snip)`
@@ -575,7 +575,7 @@ if ${1:condition}:
 	${2:${VISUAL:pass}}
 endsnippet
 
-snippet ife "If / Else" b
+snippet ifel "If / Else" b
 if ${1:condition}:
 	${2:${VISUAL:pass}}
 else:
@@ -595,14 +595,14 @@ endsnippet
 ##########################
 # Try / Except / Finally #
 ##########################
-snippet try "Try / Except" b
+snippet tryex "Try / Except" b
 try:
 	${1:${VISUAL:pass}}
 except ${2:Exception} as ${3:e}:
 	${4:raise $3}
 endsnippet
 
-snippet trye "Try / Except / Else" b
+snippet tryexe "Try / Except / Else" b
 try:
 	${1:${VISUAL:pass}}
 except ${2:Exception} as ${3:e}:
@@ -611,7 +611,7 @@ else:
 	${5:pass}
 endsnippet
 
-snippet tryf "Try / Except / Finally" b
+snippet tryexf "Try / Except / Finally" b
 try:
 	${1:${VISUAL:pass}}
 except ${2:Exception} as ${3:e}:
@@ -620,7 +620,7 @@ finally:
 	${5:pass}
 endsnippet
 
-snippet tryef "Try / Except / Else / Finally" b
+snippet tryexef "Try / Except / Else / Finally" b
 try:
 	${1:${VISUAL:pass}}
 except${2: ${3:Exception} as ${4:e}}:
